@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import classes from "./App.module.css";
+import mainLogo from "./assets/SMSBump-Logo.svg";
+import penIcon from "./assets/Icons/Top-Menu-Icons/Pen-icon.svg";
+import exitIcon from './assets/Icons/Top-Menu-Icons/Exit-icon.svg';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.primaryNav}>
+      <ul>
+        <li>
+          <img src={mainLogo} alt="default" />
+        </li>
+        <li className={classes.pen}>
+          <img src={penIcon} alt="default" />
+          <p>form 1</p>
+        </li>
+        <li className={classes.draft}>
+          <span className={classes.dot}></span>
+          <p>Draft</p>
+          <span className={classes.dropTick}></span>
+        </li>
+        <li className={classes.exit}>
+          <img src={exitIcon} alt='default'/>
+          <p>Exit</p>
+        </li>
+        <li></li>
+      </ul>
     </div>
   );
 }
